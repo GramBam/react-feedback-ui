@@ -102,6 +102,11 @@ header {
   color: #fff;
 }
 
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
 .input-group {
   display: flex;
   flex-direction: row;
@@ -227,4 +232,8 @@ input:focus {
   .input-group input {
     width: 80%;
   }
+}
+
+.header-link a:hover {
+  color: #FFF;
 }
