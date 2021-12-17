@@ -2,9 +2,11 @@ import React from 'react'
 import Card from './shared/Card'
 import Button from './shared/Button'
 import RatingSelect from './RatingSelect'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
+import FeedbackContext from "../context/FeedbackContext";
 
-function FeedbackForm({ handleAdd }) {
+function FeedbackForm() {
+  const { addFeedback } = useContext(FeedbackContext)
 
   const [text, setText] = useState('');
   const [rating, setRating] = useState(10);
@@ -30,7 +32,7 @@ function FeedbackForm({ handleAdd }) {
     e.preventDefault();
     if (text.trim().length > 10) {
       const newFeedback = { text, rating }
-      handleAdd(newFeedback)
+      addFeedback(newFeedback)
       setText('')
     }
   }
