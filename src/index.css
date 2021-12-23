@@ -152,6 +152,11 @@ input:focus {
   right: 40px;
 }
 
+.close:hover,
+.edit:hover {
+  transform: scale(1.25)
+}
+
 .btn {
   color: #fff;
   border: 0;
