@@ -42,6 +42,7 @@ function FeedbackForm() {
       const newFeedback = { text, rating }
       if (feedbackEdit.edit === true) {
         updateFeedback(feedbackEdit.item.id, newFeedback)
+        feedbackEdit.edit = false
       } else {
         addFeedback(newFeedback)
       }
